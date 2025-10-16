@@ -1,0 +1,67 @@
+// import Card from "./Card.jsx";
+// import Button from "./Button.jsx";
+// import UserGreeting from "./UserGreeting.jsx";
+// import List from "./List.jsx";
+// import ProfilePicture from "./ProfilePicture.jsx";
+// import MyComponents from "./MyComponents.jsx";
+// import Counter from "./Counter.jsx";
+// import ColorPicker from "./ColorPicker.jsx";
+// import UpdateObject from "./UpdateObject.jsx";
+// import UpdateArray from "./UpdateArray.jsx";
+// import UpdateArrayObject from "./UpdateArrayObject.jsx";
+
+// function App() {
+//   const items = [
+//     { name: "Home", color: "Red" },
+//     { name: "About", color: "Blue" },
+//     { name: "Services", color: "Green" },
+//     { name: "Contact", color: "Yellow" },
+//   ];
+
+//   const car = [
+//     { name: "Porsche", color: "Blue" },
+//     { name: "GTR", color: "Green" },
+//     { name: "Lamborghini", color: "Yellow" },
+//     { name: "Ferrari", color: "Purple" },
+//   ];
+
+//   return (
+//     <div className="App">
+//       <Card
+//         name="Jelo"
+//         age={22}
+//         description="I am an aspiring Front-end Web Developer"
+//         position="Web Developer"
+//       />
+//       <Card />
+//       <Button />
+
+//       <ProfilePicture />
+//       <UserGreeting isLoggedIn={true} username="Levvqt" />
+//       {items.length > 0 && <List items={items} category="NavTab" />}
+//       {car.length > 0 && <List items={car} category="Cars" />}
+//       <MyComponents />
+//       {/* <Counter /> */}
+//       <ColorPicker />
+//       <UpdateObject />
+//       <UpdateArray />
+//       <UpdateArrayObject />
+//       <ToDoList />
+//     </div>
+//   );
+// }
+
+// import ToDoList from "./ToDoList";
+// import UseEffect from "./UseEffect";
+// import DigitalClock from "./DigitalClock";
+// import ComponentA from "./ComponentA";
+// import UseRef from "./useRef";
+
+// function App() {
+//   return (
+//     <div className="App">
+//     </div>
+//   );
+// }
+
+// export default App;
