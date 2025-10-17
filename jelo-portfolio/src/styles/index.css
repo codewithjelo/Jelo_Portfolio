@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+      /* Colors */
+  --primary-color: #1E201E;
+  --secondary-color: #3C3D37;
+  --background: #1E201E;
+  --text-color: #ECDFCC;
+  --accent: #697565;
+
+    /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--secondary-color);
+}
+
+.header-container {
+    background-color: var(--background);
+}
+
+.logo-container a {
+    color: var(--text-color);
+}
+
+.nav-container ul li a {
+    color: var(--text-color);
+}
