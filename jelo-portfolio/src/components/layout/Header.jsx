@@ -1,36 +1,26 @@
-import {
-  Home,
-  CodeXml,
-  FolderDot,
-  User,
-  Code,
-  Briefcase,
-  Mail,
-  ExternalLink,
-  Download,
-  X,
-} from "lucide-react";
-
+import { Home, CodeXml, FolderDot, Briefcase, Mail } from "lucide-react";
+import GradientText from "../animations/GradientText";
 
 const Header = () => {
   const navItems = [
     { name: "Home", href: "#home", icon: <Home size={18} /> },
     { name: "About", href: "#about", icon: <Briefcase size={18} /> },
-    { name: "Skills", href: "#skills",icon: <CodeXml size={18} /> },
-    { name: "Projects", href: "#projects", icon: <FolderDot size={18}/> },
-    { name: "Contact", href: "#contact", icon: <Mail size={18}/> },
+    { name: "Skills", href: "#skills", icon: <CodeXml size={18} /> },
+    { name: "Projects", href: "#projects", icon: <FolderDot size={18} /> },
+    { name: "Contact", href: "#contact", icon: <Mail size={18} /> },
   ];
 
   return (
     <header className="header-container fixed top-0 left-0 right-0 bg-slate-900 backdrop-blur-sm bg-opacity-95 z-50">
       <nav className="nav-container max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          
           <div className="logo-container text-2xl font-bold">
-            <a
-              href="#home"
-            >
-              My Portfolio
+            <a href="#home">{<GradientText
+                          colors={['#da6ee2', '#746ee2ff', '#da6ee2', '#746ee2ff', '#da6ee2']}
+                          animationSpeed={15}
+                          showBorder={false}
+                          className="custom-class text-2xl"
+                        >codewithjelo</GradientText>}
             </a>
           </div>
 
