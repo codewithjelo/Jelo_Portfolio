@@ -22,14 +22,13 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-slate-900 backdrop-blur-sm bg-opacity-95 z-50 border-b border-slate-800">
-      <nav className="max-w-7xl mx-auto px-6 py-4">
+    <header className="header-container fixed top-0 left-0 right-0 bg-slate-900 backdrop-blur-sm bg-opacity-95 z-50">
+      <nav className="nav-container max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           
-          <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <div className="logo-container text-2xl font-bold">
             <a
               href="#home"
-              className="hover:from-cyan-300 hover:to-blue-400 transition-all duration-300"
             >
               My Portfolio
             </a>
