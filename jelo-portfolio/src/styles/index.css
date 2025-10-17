@@ -4,11 +4,12 @@
 
 :root {
       /* Colors */
-  --primary-color: #1E201E;
-  --secondary-color: #3C3D37;
+  --primary-color: #888888;
+  --secondary-color: #a7a7a7;
   --background: #1E201E;
-  --text-color: #ECDFCC;
-  --accent: #697565;
+  --text-color: #e3e3e3;
+  --accent: #da6ee2;
+  --transparent: transparent;
 
     /* Font sizes */
   --text-xs: 0.75rem;
@@ -22,11 +23,11 @@
 
 body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: var(--secondary-color);
+    background-color: var(--background);
 }
 
 .header-container {
-    background-color: var(--background);
+    background-color: var(--transparent);
 }
 
 .logo-container a {
