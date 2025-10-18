@@ -1,4 +1,5 @@
 import AboutCard from "../ui/AboutCard";
+import CertificateCard from "../ui/CertificateCard";
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
           <AboutCard />
 
           {/* Right Column - Skills & Stats */}
+          <CertificateCard />
           
         </div>
       </div>
