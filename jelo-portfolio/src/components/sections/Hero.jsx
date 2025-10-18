@@ -1,8 +1,32 @@
 import GradientText from "../animations/GradientText";
 import TextType from "../animations/TextType";
-import { SiHtml5, SiCss3, SiPython, SiTailwindcss, SiReact, SiLaravel } from 'react-icons/si';
+import Button from "../ui/Button";
+import { Download, ChevronDown } from "lucide-react";
+import {
+  SiHtml5,
+  SiCss3,
+  SiPython,
+  SiTailwindcss,
+  SiReact,
+  SiLaravel,
+} from "react-icons/si";
 
 const Hero = () => {
+  const handleDownload = () => {
+    const confirmDownload = window.confirm(
+      "Do you want to download the resume?"
+    );
+
+    if (confirmDownload) {
+      const link = document.createElement("a");
+      link.href = "./src/assets/resume/Dimaano-Jann-Angelo-Resume.pdf";
+      link.download = "Dimaano-Jann-Angelo-Resume.pdf"; // Name for the downloaded file
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center">
       <div className="home-container max-w-7xl px-6 py-20 flex flex-col lg:flex-row items-center gap-[10vw]">
@@ -40,39 +64,13 @@ const Hero = () => {
           </p>
 
           <div className="flex items-center gap-4 mb-6">
-            <a
-              href="#projects"
-              className="inline-flex items-center px-5 py-3 bg-cyan-500 text-slate-900 font-semibold rounded-lg hover:bg-cyan-400 transition"
+            <Button
+              className="resume-btn inline-flex items-center px-5 py-3 font-semibold rounded-lg"
+              onClick={handleDownload}
             >
-              View Projects
-            </a>
-
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center px-4 py-3 border border-slate-700 text-slate-300 rounded-lg hover:border-slate-600 hover:text-cyan-400 transition"
-            >
-              Resume
-            </a>
-          </div>
-
-          <div className="flex flex-wrap gap-3">
-            <span className="text-xs px-3 py-1 bg-slate-800 text-slate-300 rounded-full">
-              React
-            </span>
-
-            <span className="text-xs px-3 py-1 bg-slate-800 text-slate-300 rounded-full">
-              TypeScript
-            </span>
-
-            <span className="text-xs px-3 py-1 bg-slate-800 text-slate-300 rounded-full">
-              Tailwind
-            </span>
-
-            <span className="text-xs px-3 py-1 bg-slate-800 text-slate-300 rounded-full">
-              Node
-            </span>
+              <Download className="mr-2" size={18} />
+              <span className="flex">Download Resume</span>
+            </Button>
           </div>
         </div>
 
@@ -115,22 +113,15 @@ const Hero = () => {
       {/* Scroll indicator */}
       <a
         href="#about"
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-400 hover:text-cyan-400 transition"
+        onClick={(e) => {
+          e.preventDefault();
+          document
+            .getElementById("about")
+            .scrollIntoView({ behavior: "smooth" });
+        }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-400 hover:text-accent transition cursor-pointer"
       >
-        <svg
-          className="w-6 h-6 animate-bounce"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-          ></path>
-        </svg>
+        <ChevronDown className="w-8 h-8 animate-bounce" />
       </a>
     </section>
   );
