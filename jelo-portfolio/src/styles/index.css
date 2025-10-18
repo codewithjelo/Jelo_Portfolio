@@ -9,6 +9,7 @@
   --background: #1E201E;
   --text-color: #e3e3e3;
   --accent: #da6ee2;
+  --accent-hover: #a954af;
   --transparent: transparent;
 
     /* Font sizes */
@@ -22,49 +23,95 @@
 }
 
 body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: var(--background);
-    margin: 0 50px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--background);
+  margin: 0 50px;
 }
 
+/* Header */
 .header-container {
-    background-color: var(--transparent);
-    margin: 0 50px;
-}
-
-.nav-link a:hover {
-    color: var(--accent);
-    transition: ease 0.5s;
-}
-
-.nav-link span {
-    background-color: var(--accent);
-}
-
-.logo-container a {
-    color: var(--accent);
+  background-color: var(--transparent);
+  margin: 0 50px;
 }
 
 .nav-container ul li a {
-    color: var(--text-color);
+  color: var(--text-color);
+}
+
+.nav-link a:hover {
+  color: var(--accent);
+  transition: ease 0.5s;
+}
+
+.nav-link span {
+  background-color: var(--accent);
+}
+
+.logo-container a {
+  color: var(--accent);
 }
 
 /* Hero Section */
+/* Left Section */
 .name-text span {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .name-text, .description {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .image-border {
-    background-color: var(--accent);
+  background-color: var(--accent);
 }
 
+.resume-btn {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--transparent);
+  color: var(--text-color);
+  border: 2px solid var(--accent);
+  transition: color 0.25s ease;
+  z-index: 1;
+}
+
+.resume-btn {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--accent);
+  transition: color 0.25s ease;
+  z-index: 1;
+  padding: 8px 16px;
+}
+
+.resume-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  z-index: -1;
+  transform-origin: right;
+  transform: scaleX(2) translateX(20%) skew(-30deg);
+  transition: transform 0.45s cubic-bezier(.22,.9,.37,1);
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+}
+
+.resume-btn:hover::before {
+  transform: skew(-30deg) translateX(120%);
+}
+
+.resume-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Right Section */
 .floating-icon {
   position: absolute;
-  z-index: 30; /* above the blurred background but below any UI overlays */
+  z-index: 30;
   opacity: 0.95;
   display: flex;
   align-items: center;
@@ -90,39 +137,39 @@ body {
 
 /* positions and animation variations */
 .icon-1 {
-    top: 4%;
-    left: 12%;
-    animation: floatA 6s ease-in-out infinite;
+  top: 4%;
+  left: 12%;
+  animation: floatA 6s ease-in-out infinite;
 }
 
 .icon-2 {
-    top: 10%;
-    right: 14%;
-    animation: floatB 7s ease-in-out infinite;
+  top: 10%;
+  right: 14%;
+  animation: floatB 7s ease-in-out infinite;
 }
 
 .icon-3 {
-    bottom: 9%;
-    left: 10%;
-    animation: floatC 5.5s ease-in-out infinite;
+  bottom: 9%;
+  left: 10%;
+  animation: floatC 5.5s ease-in-out infinite;
 }
 
 .icon-4 {
-    bottom: 2%;
-    right: 12%;
-    animation: floatD 6.5s ease-in-out infinite;
+  bottom: 2%;
+  right: 12%;
+  animation: floatD 6.5s ease-in-out infinite;
 }
 
 .icon-5 {
-    top: 44%;
-    left: -8%;
-    animation: floatE 8s ease-in-out infinite;
+  top: 44%;
+  left: -8%;
+  animation: floatE 8s ease-in-out infinite;
 }
 
 .icon-6 {
-    top: 54%;
-    right: -3%;
-    animation: floatF 8s ease-in-out infinite;
+  top: 54%;
+  right: -3%;
+  animation: floatF 8s ease-in-out infinite;
 }
 
 .icon-1 .tech-icon, 
@@ -131,7 +178,7 @@ body {
 .icon-4 .tech-icon,   
 .icon-5 .tech-icon, 
 .icon-6 .tech-icon { 
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* subtle scale/rotate per keyframe set for variety */
