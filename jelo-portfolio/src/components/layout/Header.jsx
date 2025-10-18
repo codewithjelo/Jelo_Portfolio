@@ -25,16 +25,16 @@ const Header = () => {
           </div>
 
           {/* Navigation Links */}
-          <ul className="flex items-center gap-8">
+          <ul className="nav-link flex items-center gap-8">
             {navItems.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="flex flex-row items-center gap-2 text-slate-300 hover:text-cyan-400 font-medium transition-all duration-300 relative group"
+                  className="flex flex-row items-center gap-2 text-slate-300 font-medium transition-all duration-300 relative group"
                 >
                   {item.icon}
                   {item.name}
-                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"></span>
                 </a>
               </li>
             ))}
