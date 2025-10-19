@@ -119,9 +119,9 @@ const Hero = () => {
             .getElementById("about")
             .scrollIntoView({ behavior: "smooth" });
         }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-400 hover:text-accent transition cursor-pointer"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 transition cursor-pointer"
       >
-        <ChevronDown className="w-8 h-8 animate-bounce" />
+        <ChevronDown className="chevron-down w-8 h-8 animate-bounce" />
       </a>
     </section>
   );
