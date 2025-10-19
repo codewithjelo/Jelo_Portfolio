@@ -19,7 +19,7 @@ const CertificateCard = () => {
       {/* Vertical Timeline Line - now inside scrollable container */}
       {/* Skills Grid */}
       <div className="relative">
-        <div className="snap-y flex flex-col max-h-[280px] overflow-y-auto gap-4">
+        <div className="custom-scrollbar snap-y flex flex-col max-h-[280px] overflow-y-auto gap-4">
           {[...certs].reverse().map((cert, index, array) => (
             <div key={index} className="snap-start mr-4">
               <div className="certs relative pl-10">
