@@ -21,8 +21,15 @@
   --text-2xl: 1.5rem;
   --text-3xl: 2rem;
 
+   /* Border radius */
+  --border-full: 50%;
+  --border-xs: 2px;
+  --border-sm: 5px;
+  --border-md: 8px;
+  --border-lg: 10px;
+
    /* Font Family */
-   --family-1: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+  --family-1: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
 }
 
 * {
@@ -241,9 +248,43 @@ body {
 .about-card, .cert-card {
   background-color: var(--primary-color);
   border: 1px solid var(--text-color);
-  border-radius: 10px;
+  border-radius: var(--border-lg);
 }
 
-.about-text, .about-desc, .cert-text {
+.about-text, .cert-text {
+  color: var(--accent);
+}
+
+.about-desc {
   color: var(--text-color);
+}
+
+.timeline {
+  background-color: var(--text-color);
+}
+
+.node {
+  border: 2px solid var(--text-color);
+  border-radius: var(--border-full);
+  background-color: var(--background);
+  transition: ease 0.5s;
+}
+
+.node:hover {
+  background-color: var(--accent);
+  transition: ease 0.5s;
+}
+
+.cert-list {
+  background-color: var(--background);
+  border-radius: var(--border-sm);
+}
+
+.cert-list h4 {
+  color: var(--text-color);
+}
+
+.cert-list p {
+  font-size: var(--text-xs);
+  color: var(--secondary-color);
 }
