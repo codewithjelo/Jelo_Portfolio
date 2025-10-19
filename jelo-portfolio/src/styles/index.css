@@ -263,15 +263,14 @@ body {
   background-color: var(--text-color);
 }
 
+.certs:hover   .node{
+  background-color: var(--accent);
+}
+
 .node {
   border: 2px solid var(--text-color);
   border-radius: var(--border-full);
   background-color: var(--background);
-  transition: ease 0.5s;
-}
-
-.node:hover {
-  background-color: var(--accent);
   transition: ease 0.5s;
 }
 

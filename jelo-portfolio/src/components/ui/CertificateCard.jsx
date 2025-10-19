@@ -22,21 +22,21 @@ const CertificateCard = () => {
         <div className="snap-y flex flex-col max-h-[280px] overflow-y-auto gap-4">
           {[...certs].reverse().map((cert, index, array) => (
             <div key={index} className="snap-start mr-4">
-              <div className="relative pl-10">
+              <div className="certs relative pl-10">
                 {/* Node */}
                 {index === 0 ? (
                   <>
-                    <div className="timeline absolute left-4 top-[40px] bottom-0 bg-slate-400 h-[95px] w-[1px]"></div>
+                    <div className="timeline absolute left-4 top-[40px] bottom-0 h-[95px] w-[1px]"></div>
                     <div className="node absolute left-[9px] top-8 w-4 h-4"></div>
                   </>
                 ) : index === certs.length - 1 ? (
                   <>
-                    <div className="timeline absolute left-4 top-0 bottom-0 bg-slate-400 h-[40px] w-[1px]"></div>
+                    <div className="timeline absolute left-4 top-0 bottom-0 h-[40px] w-[1px]"></div>
                     <div className="node absolute left-[9px] top-8 w-4 h-4"></div>
                   </>
                 ) : (
                   <>
-                    <div className="timeline absolute left-4 top-0 bottom-0 bg-slate-400 h-[95px] w-[1px]"></div>
+                    <div className="timeline absolute left-4 top-0 bottom-0 h-[95px] w-[1px]"></div>
                     <div className="node absolute left-[9px] top-8 w-4 h-4"></div>
                   </>
                 )}
