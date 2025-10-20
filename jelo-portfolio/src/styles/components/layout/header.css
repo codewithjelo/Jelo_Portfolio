@@ -1,0 +1,22 @@
+/* Header */
+.header-container {
+  background-color: var(--transparent);
+  margin: 0 120px;
+}
+
+.nav-container ul li a {
+  color: var(--text-color);
+}
+
+.nav-link a:hover {
+  color: var(--accent);
+  transition: ease 0.5s;
+}
+
+.nav-link span {
+  background-color: var(--accent);
+}
+
+.logo-container a {
+  color: var(--accent);
+}
