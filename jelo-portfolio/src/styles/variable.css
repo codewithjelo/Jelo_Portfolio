@@ -7,6 +7,7 @@
   --accent: #da6ee2;
   --accent-hover: #a954af;
   --transparent: transparent;
+  --border-black: hsl(0, 0%, 20%);
 
     /* Font sizes */
   --text-xs: 0.75rem;
@@ -25,6 +26,7 @@
   --border-sm: 5px;
   --border-md: 8px;
   --border-lg: 10px;
+  --border-xl: 15px;
 
    /* Font Family */
   --family-1: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
