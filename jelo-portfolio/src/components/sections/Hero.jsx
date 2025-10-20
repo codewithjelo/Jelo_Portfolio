@@ -1,6 +1,7 @@
 import GradientText from "../animations/GradientText";
 import TextType from "../animations/TextType";
 import Button from "../ui/Button";
+import '../../styles/components/sections/hero.css'
 import { Download, ChevronDown } from "lucide-react";
 import {
   SiHtml5,
