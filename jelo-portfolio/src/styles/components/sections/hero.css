@@ -1,5 +1,10 @@
 /* Hero Section */
 /* Left Section */
+#home {
+  background-color: var(--primary-color);
+  transition: background-color 1s ease;
+}
+
 .name-text span {
   color: var(--accent);
 }

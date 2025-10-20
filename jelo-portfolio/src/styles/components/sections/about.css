@@ -1,6 +1,7 @@
 /* About Section */
 #about {
-  background-color: var(--primary-color);
+  background-color: var(--background);
+  transition: background-color 1s ease;
 }
 
 .tagline {
