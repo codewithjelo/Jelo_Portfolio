@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import GradientText from "../animations/GradientText";
 import TextType from "../animations/TextType";
 import Button from "../ui/Button";
@@ -12,7 +13,7 @@ import {
   SiLaravel,
 } from "react-icons/si";
 
-const Hero = () => {
+const Hero = forwardRef((props, ref) => {
   const handleDownload = () => {
     const confirmDownload = window.confirm(
       "Do you want to download the resume?"
@@ -29,7 +30,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center">
+    <section id="home" ref={ref} className="min-h-screen flex items-center">
       <div className="home-container max-w-7xl px-6 py-20 flex flex-col lg:flex-row items-center gap-[10vw]">
         {/* Left: text */}
         <div className="w-full lg:w-2/5">
@@ -126,6 +127,8 @@ const Hero = () => {
       </a>
     </section>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;

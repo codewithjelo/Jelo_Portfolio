@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import AboutCard from "../ui/AboutCard";
 import CertificateCard from "../ui/CertificateCard";
 import TechStackCard from "../ui/TechStackCard";
@@ -5,7 +6,7 @@ import LogoLoop from "../animations/LogoLoop";
 import "../../styles/components/sections/about.css";
 import { SiReact, SiLaravel, SiPython, SiTailwindcss } from "react-icons/si";
 
-const About = () => {
+const About = forwardRef((props, ref) => {
   const techLogos = [
     { node: <SiReact />, title: "React" },
     { node: <SiLaravel />, title: "Laravel"},
@@ -20,9 +21,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="min-h-screen min-w-screen py-20">
+    <section id="about" ref={ref} className="min-h-screen min-w-screen py-20">
       <div className="max-w-7xl px-6">
-        <h1 className="tagline uppercase text-center mb-10">
+        <h1 className="tagline uppercase text-center mb-20">
           “<span>Learning </span> today <span>to build a better</span> tomorrow
           ”
         </h1>
@@ -54,6 +55,8 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
+
+About.displayName = 'About';
 
 export default About;
