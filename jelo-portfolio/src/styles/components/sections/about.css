@@ -17,18 +17,27 @@
   padding: 10px;
 }
 
-.about-card, .cert-card {
+.about-card, .cert-card, .techstack-card {
   background-color: var(--background);
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--border-black);
   border-radius: var(--border-lg);
 }
 
-.about-text, .cert-text {
+.about-text, .cert-text, .techstack-text {
+  color: var(--text-color);
+}
+
+.about-icon {
   color: var(--accent);
 }
 
 .about-desc {
   color: var(--text-color);
+  line-height: 35px;
+}
+
+.cert-card {
+  height: 330px;
 }
 
 .timeline {
@@ -104,4 +113,15 @@
 .custom-scrollbar.scrolling::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
   animation: fadeIn 0.2s ease;
+}
+
+.techstack-pill {
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: var(--border-xl);
+  font-size: var(--text-sm);
+}
+
+.logo-loop {
+  color: var(--text-color);
 }
