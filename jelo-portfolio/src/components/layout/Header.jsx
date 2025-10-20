@@ -1,11 +1,11 @@
 import { Home, CodeXml, FolderDot, Briefcase, Mail } from "lucide-react";
 import GradientText from "../animations/GradientText";
+import '../../styles/components/layout/header.css'
 
 const Header = () => {
   const navItems = [
     { name: "Home", href: "home", icon: <Home size={18} /> },
     { name: "About", href: "about", icon: <Briefcase size={18} /> },
-    { name: "Skills", href: "skills", icon: <CodeXml size={18} /> },
     { name: "Projects", href: "projects", icon: <FolderDot size={18} /> },
     { name: "Contact", href: "contact", icon: <Mail size={18} /> },
   ];
