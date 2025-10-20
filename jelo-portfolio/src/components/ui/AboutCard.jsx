@@ -1,4 +1,4 @@
-import { GraduationCap, Briefcase, Award } from "lucide-react";
+import { Briefcase } from "lucide-react";
 
 const AboutCard = () => {
   return (
@@ -8,10 +8,10 @@ const AboutCard = () => {
       </h3>
       <p className="about-desc leading-relaxed text-justify indent-8 px-4">
         I am Jann Angelo C. Dimaano, 22 years old, from Batangas City. I am a
-        fresh graduate of BS Information Technology, Major in Business Analytics
-        (2025) from Batangas State University. My interest in web development
-        began when I entered college, starting with vanilla HTML, CSS, and
-        JavaScript while building front-end projects.
+        fresh graduate from Batangas State University and took BS Information
+        Technology, Major in Business Analytics (Batch 2025). My interest in web
+        development began when I entered college, starting with vanilla HTML,
+        CSS, and JavaScript while building front-end projects.
       </p>
       <br />
       <br />
