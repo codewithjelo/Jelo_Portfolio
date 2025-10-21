@@ -48,7 +48,7 @@ const About = forwardRef((props, ref) => {
             gap={80}
             scaleOnHover
             fadeOut
-            fadeOutColor="var(--primary-color)"
+            fadeOutColor="var(--transparent)"
             ariaLabel="Technology partners"
           />
         </div>
