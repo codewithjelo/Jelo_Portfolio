@@ -6,6 +6,7 @@ import Projects from "../sections/Projects";
 const Layout = () => {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,6 +29,7 @@ const Layout = () => {
 
     if (heroRef.current) observer.observe(heroRef.current);
     if (aboutRef.current) observer.observe(aboutRef.current);
+    if (projectsRef.current) observer.observe(projectsRef.current);
 
     return () => observer.disconnect();
   }, []);
@@ -36,7 +38,7 @@ const Layout = () => {
     <div>
       <Hero ref={heroRef} />
       <About ref={aboutRef} />
-      <Projects />
+      <Projects ref={projectsRef} />
     </div>
   );
 };
