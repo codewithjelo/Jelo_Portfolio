@@ -1,11 +1,11 @@
 :root {
       /* Colors */
   --primary-color: #141414;
-  --secondary-color: #a7a7a7;
+  --secondary-color: #373737;
   --background: #202020;
   --text-color: #e3e3e3;
   --accent: #da6ee2;
-  --accent-hover: #a954af;
+  --accent-hover: #67336b;
   --transparent: transparent;
   --border-black: hsl(0, 0%, 20%);
 
