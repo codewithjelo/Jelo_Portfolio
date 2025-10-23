@@ -36,13 +36,13 @@ const ImageCarousel = ({ images, title }) => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 text-white p-2 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-slate-800"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-[var(--secondary-color)] text-[var(--text-color)] p-2 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-[var(--accent)]-800"
       >
         <ChevronLeft size={20} />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 text-white p-2 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-slate-800"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-[var(--secondary-color)] text-[var(--text-color)] p-2 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity hover:bg-slate-800"
       >
         <ChevronRight size={20} />
       </button>
@@ -53,7 +53,7 @@ const ImageCarousel = ({ images, title }) => {
             key={index}
             onClick={() => setCurrent(index)}
             className={`w-2 h-2 rounded-full transition-all ${
-              index === current ? 'bg-cyan-400 w-6' : 'bg-slate-500'
+              index === current ? 'bg-[var(--accent)] w-6' : 'bg-[var(--text-color)]'
             }`}
           />
         ))}
