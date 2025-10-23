@@ -23,10 +23,12 @@ const About = forwardRef((props, ref) => {
   return (
     <section id="about" ref={ref} className="min-h-screen min-w-screen py-20">
       <div className="max-w-7xl px-6">
-        <h1 className="tagline uppercase text-center mb-20">
+        <h1 className="about-tagline uppercase text-center mb-4">
           “<span>Learning </span> today <span>to build a better</span> tomorrow
           ”
         </h1>
+
+        <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-16"></div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-[650px_1fr] gap-[2vw]">
