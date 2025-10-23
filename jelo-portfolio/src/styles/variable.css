@@ -8,6 +8,7 @@
   --accent-hover: #67336b;
   --transparent: transparent;
   --border-black: hsl(0, 0%, 20%);
+  --subtext-color: hsl(0, 0%, 70%);
 
     /* Font sizes */
   --text-xs: 0.75rem;
