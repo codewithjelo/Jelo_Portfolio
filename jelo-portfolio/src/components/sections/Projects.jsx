@@ -184,12 +184,12 @@ const Projects = forwardRef((props, ref) => {
           </div>
 
           {/* View More in Container */}
-          <div className="text-center mt-8 pt-8 border-t border-slate-800">
+          <div className="view-more text-center mt-8 pt-8">
             <a
               href="https://github.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300"
+              className="view-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg"
             >
               <span>View All on GitHub</span>
               <ArrowRight size={18} />
