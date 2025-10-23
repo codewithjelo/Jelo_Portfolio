@@ -4,15 +4,15 @@
   transition: background-color 1s ease;
 }
 
-.tagline {
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.about-tagline {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: var(--text-color);
   font-size: var(--text-4xl);
   font-style: italic;
 }
 
-.tagline span {
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.about-tagline span {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: var(--accent);
   font-size: var(--text-4xl);
   padding: 10px;
@@ -45,7 +45,7 @@
   background-color: var(--text-color);
 }
 
-.certs:hover   .node{
+.certs:hover .node{
   background-color: var(--accent);
 }
 
