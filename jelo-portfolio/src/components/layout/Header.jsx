@@ -11,7 +11,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="header-container fixed top-0 left-0 right-0 bg-slate-900 backdrop-blur-sm bg-opacity-95 z-50">
+    <header className="header-container w-full fixed top-0 left-0 right-0 backdrop-blur-sm bg-opacity-95 z-50">
       <nav className="nav-container max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="logo-container text-2xl font-bold">
