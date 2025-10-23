@@ -61,6 +61,43 @@
   font-size: var(--text-sm);
 }
 
+.view-more {
+    border-top: 1px solid var(--accent);
+}
+
+.view-btn {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--accent);
+  transition: color 0.25s ease;
+  z-index: 1;
+  padding: 8px 16px;
+}
+
+.view-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent-hover);
+  z-index: -1;
+  transform-origin: right;
+  transform: scaleX(2) translateX(20%) skew(-30deg);
+  transition: transform 0.45s cubic-bezier(.22,.9,.37,1);
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+}
+
+.view-btn:hover::before {
+  transform: skew(-30deg) translateX(120%);
+}
+
+.view-btn:hover {
+  color: var(--text-color);
+  border-color: var(--accent);
+}
+
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px;
 }
