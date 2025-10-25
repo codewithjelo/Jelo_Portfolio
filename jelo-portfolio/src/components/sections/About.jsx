@@ -1,10 +1,10 @@
 import { forwardRef } from 'react';
+import { SiReact, SiLaravel, SiPython, SiTailwindcss } from "react-icons/si";
 import AboutCard from "../ui/AboutCard";
 import CertificateCard from "../ui/CertificateCard";
 import TechStackCard from "../ui/TechStackCard";
 import LogoLoop from "../animations/LogoLoop";
 import "../../styles/components/sections/about.css";
-import { SiReact, SiLaravel, SiPython, SiTailwindcss } from "react-icons/si";
 
 const About = forwardRef((props, ref) => {
   const techLogos = [
