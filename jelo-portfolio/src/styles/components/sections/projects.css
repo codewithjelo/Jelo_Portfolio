@@ -62,7 +62,7 @@
 }
 
 .view-more {
-    border-top: 1px solid var(--accent);
+    border-top: 1px solid var(--border-black);
 }
 
 .view-btn {
