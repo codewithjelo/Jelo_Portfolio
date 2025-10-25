@@ -5,7 +5,6 @@ import Hero from "../sections/Hero";
 import About from "../sections/About";
 import Projects from "../sections/Projects";
 import Contact from "../sections/Contact";
-import Footer from "./Footer";
 
 const Layout = () => {
   const heroRef = useRef(null);
@@ -76,7 +75,6 @@ const Layout = () => {
       <About ref={aboutRef} />
       <Projects ref={projectsRef} />
       <Contact ref={contactRef} />
-      <Footer />
 
       {/* Scroll to Top Button - Always rendered for smooth transitions */}
       <button
