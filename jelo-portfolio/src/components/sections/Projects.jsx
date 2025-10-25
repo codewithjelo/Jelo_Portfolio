@@ -99,7 +99,7 @@ const Projects = forwardRef((props, ref) => {
       <div className="max-w-6xl mx-auto">
         {/* Project Header */}
         <div className="mb-12 text-center">
-          <h2 className="project-tagline mb-4 uppercase">
+          <h2 className="project-tagline mt-10 mb-4 uppercase">
             Featured<span>Projects</span>
           </h2>
           <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-6"></div>

@@ -23,7 +23,7 @@ const About = forwardRef((props, ref) => {
   return (
     <section id="about" ref={ref} className="min-h-screen min-w-screen py-20">
       <div className="max-w-7xl px-6">
-        <h1 className="about-tagline uppercase text-center mb-4">
+        <h1 className="about-tagline uppercase text-center mt-10 mb-4">
           “<span>Learning </span> today <span>to build a better</span> tomorrow
           ”
         </h1>
