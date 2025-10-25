@@ -1,0 +1,9 @@
+.scroll-top {
+    color: var(--text-color);
+    transition: ease 0.5s;
+}
+
+.scroll-top:hover {
+    color: var(--accent);
+    transition: ease 0.5s;
+}
