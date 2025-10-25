@@ -19,22 +19,18 @@ const Layout = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Add transition
           entry.target.style.transition = "background-color 1s ease";
 
           if (entry.isIntersecting) {
-            // Active section gets primary color
             entry.target.style.backgroundColor = "var(--primary-color)";
             
-            // Check if we're in hero section
+
             if (entry.target === heroRef.current) {
               setIsInHero(true);
             }
           } else {
-            // Inactive section gets background color
             entry.target.style.backgroundColor = "var(--background)";
             
-            // If hero is not intersecting, we're not in hero
             if (entry.target === heroRef.current) {
               setIsInHero(false);
             }
@@ -54,7 +50,7 @@ const Layout = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show button when not in hero section and scrolled past 300px
+
       setShowScrollTop(window.scrollY > 300 && !isInHero);
     };
 
@@ -70,13 +66,12 @@ const Layout = () => {
   };
 
   return (
-    <div className="snap-y">
+    <div>
       <Hero  ref={heroRef} />
       <About ref={aboutRef} />
       <Projects ref={projectsRef} />
       <Contact ref={contactRef} />
 
-      {/* Scroll to Top Button - Always rendered for smooth transitions */}
       <button
         onClick={scrollToTop}
         className={`scroll-top fixed bottom-8 right-8 transition-all duration-500 ease-in-out ${
