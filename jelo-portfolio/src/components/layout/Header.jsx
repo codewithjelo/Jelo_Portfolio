@@ -1,8 +1,11 @@
+import { useEffect, useState } from "react";
 import { Home, CodeXml, FolderDot, Briefcase, Mail } from "lucide-react";
 import GradientText from "../animations/GradientText";
 import '../../styles/components/layout/header.css'
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const navItems = [
     { name: "Home", href: "home", icon: <Home size={18} /> },
     { name: "About", href: "about", icon: <Briefcase size={18} /> },
@@ -10,8 +13,27 @@ const Header = () => {
     { name: "Contact", href: "contact", icon: <Mail size={18} /> },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('home');
+      if (heroSection) {
+        const heroBottom = heroSection.offsetHeight;
+        setIsScrolled(window.scrollY > heroBottom - 100);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="header-container w-full fixed top-0 left-0 right-0 backdrop-blur-sm bg-opacity-95 z-50">
+    <header 
+      className={`header-container w-full fixed top-0 left-0 right-0 backdrop-blur-sm bg-opacity-95 z-50 transition-all duration-500 ${
+        isScrolled ? 'scrolled' : ''
+      }`}
+    >
       <nav className="nav-container max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="logo-container text-2xl font-bold">
