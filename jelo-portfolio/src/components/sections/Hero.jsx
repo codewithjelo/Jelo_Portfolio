@@ -31,10 +31,10 @@ const Hero = forwardRef((props, ref) => {
   };
 
   return (
-    <section id="home" ref={ref} className="min-h-92 lg:min-h-screen flex flex-col pt-10 sm:pt-20 sm:items-center">
-      <div className="container max-w-full flex flex-col lg:flex-row items-center gap-[10vw]">
+    <section id="home" ref={ref} className="min-h-92 xl:min-h-screen flex flex-col pt-10 sm:pt-20 sm:items-center">
+      <div className="container max-w-full flex flex-col items-center xl:flex-row xl:gap-[10vw]">
         {/* Left: text */}
-        <div className="w-full lg:w-2/5">
+        <div className="w-full xl:w-2/5">
           <h1 className="name-text text-2xl md:text-4xl font-extrabold leading-tight mb-4">
             Hello, I'm
             <br />
@@ -78,7 +78,7 @@ const Hero = forwardRef((props, ref) => {
         </div>
 
         {/* Right: image / illustration */}
-        <div className="ms-[2vw] w-full lg:w-3/5 flex justify-center lg:justify-end">
+        <div className="w-full xl:w-3/5 flex justify-center xl:justify-end">
           <div className="relative h-50 sm:w-96 sm:h-96 md:w-[25rem] md:h-[25rem] p-1 rounded-full">
             <div className="neon absolute inset-0 rounded-full bg-gradient-to-tr from-[#da6ee2] to-[#1E201E] filter blur-md mb-2 ms-2"></div>
 

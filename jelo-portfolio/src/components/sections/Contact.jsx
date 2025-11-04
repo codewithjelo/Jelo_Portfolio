@@ -7,7 +7,7 @@ const Contact = forwardRef((props, ref) => {
   const [activeSection, setActiveSection] = useState("contact-form");
 
   return (
-    <section id="contact" ref={ref} className="min-h-screen min-w-screen">
+    <section id="contact" ref={ref} className="xl:min-h-screen min-w-screen">
       <div className="container max-w-full">
         {/* Contact Header */}
         <div className="mb-12 text-center">

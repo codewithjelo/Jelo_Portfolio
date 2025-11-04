@@ -31,7 +31,7 @@ const ContactForm = () => {
 
   return (
     <div className="space-y-12 animate-fade-in">
-      <div className="contact-card grid grid-cols-1 lg:grid-cols-2 pt-8 px-8">
+      <div className="contact-card grid grid-cols-1 lg:grid-cols-2 py-8 px-8">
         <div>
           <h3 className="contact-text flex text-xl lg:text-2xl font-semibold mb-6">
             <Mail className="contact-icon my-1 mr-2" size={24} />
@@ -98,7 +98,7 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="contact-btn w-full font-semibold py-3 rounded-lg flex items-center justify-center gap-2"
+              className="contact-btn w-full font-semibold pt-6 rounded-lg flex items-center justify-center gap-2"
             >
               {status === "sending" ? (
                 "Sending..."
@@ -114,8 +114,8 @@ const ContactForm = () => {
           </form>
         </div>
 
-        <div className="p-3 md:p-8">
-          <img src="../src/assets/email-illustration.png" alt="email-illustration" className="hidden md:flex" />
+        <div className="p-3 lg:p-8">
+          <img src="../src/assets/email-illustration.png" alt="email-illustration" className="hidden lg:flex" />
         </div>
       </div>
     </div>

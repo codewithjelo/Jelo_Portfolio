@@ -94,7 +94,7 @@ const Projects = forwardRef((props, ref) => {
     <section
       id="projects"
       ref={ref}
-      className="min-h-screen min-w-screen"
+      className="xl:min-h-screen min-w-screen"
     >
       <div className="container max-w-full">
         {/* Project Header */}
