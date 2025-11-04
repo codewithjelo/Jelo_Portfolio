@@ -2,6 +2,7 @@ import { forwardRef } from 'react';
 import GradientText from "../animations/GradientText";
 import TextType from "../animations/TextType";
 import Button from "../ui/Button";
+import profileImg from "../../assets/images/jelo.jpg";
 import '../../styles/components/sections/hero.css'
 import { Download, ChevronDown } from "lucide-react";
 import {
@@ -31,7 +32,7 @@ const Hero = forwardRef((props, ref) => {
 
   return (
     <section id="home" ref={ref} className="min-h-screen flex items-center">
-      <div className="home-container max-w-7xl px-6 py-20 flex flex-col lg:flex-row items-center gap-[10vw]">
+      <div className="container max-w-full flex flex-col lg:flex-row items-center gap-[10vw]">
         {/* Left: text */}
         <div className="w-full lg:w-2/5">
           <h1 className="name-text text-4xl sm:text-4xl font-extrabold leading-tight mb-4">
@@ -60,7 +61,7 @@ const Hero = forwardRef((props, ref) => {
             />
           </h1>
 
-          <p className="desciption text-lg text-slate-100 max-w-xl mb-6">
+          <p className="description max-w-xl mb-6">
             I build fast, accessible, and maintainable front-end applications
             using modern tools and best practices.
           </p>
@@ -78,8 +79,8 @@ const Hero = forwardRef((props, ref) => {
 
         {/* Right: image / illustration */}
         <div className="ms-[2vw] w-full lg:w-3/5 flex justify-center lg:justify-end">
-          <div className="relative h-64 sm:w-96 sm:h-96 md:w-[25rem] md:h-[25rem] p-1 rounded-full">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#da6ee2] to-[#1E201E] filter blur-md mb-2 ms-2"></div>
+          <div className="relative h-50 sm:w-96 sm:h-96 md:w-[25rem] md:h-[25rem] p-1 rounded-full">
+            <div className="neon absolute inset-0 rounded-full bg-gradient-to-tr from-[#da6ee2] to-[#1E201E] filter blur-md mb-2 ms-2"></div>
 
             {/* floating icons (looping animation) */}
             <div className="floating-icon icon-1" title="HTML">
@@ -101,9 +102,9 @@ const Hero = forwardRef((props, ref) => {
               <SiTailwindcss className="tech-icon" />
             </div>
 
-            <div className="relative z-10 shadow-xl w-full h-full bg-slate-900 rounded-full overflow-hidden flex items-center justify-center">
+            <div className="image-container relative z-10 shadow-xl w-full h-full bg-slate-900 rounded-full overflow-hidden flex items-center justify-center">
               <img
-                src="./src/assets/images/jelo.jpg"
+                src={profileImg}
                 alt="Jelo Image"
                 className="object-cover object-top w-full h-full"
               />
