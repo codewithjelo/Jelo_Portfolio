@@ -94,9 +94,9 @@ const Projects = forwardRef((props, ref) => {
     <section
       id="projects"
       ref={ref}
-      className="min-h-screen min-w-screen py-20"
+      className="min-h-screen min-w-screen"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="container max-w-full">
         {/* Project Header */}
         <div className="mb-12 text-center">
           <h2 className="project-tagline mt-10 mb-4 uppercase">

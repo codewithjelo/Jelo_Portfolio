@@ -14,7 +14,7 @@ const ProjectContainer = ({projects, length}) => {
           </div>
 
           {/* Scrollable Projects Grid */}
-          <div className="max-h-[600px] overflow-y-auto pr-4 custom-scrollbar">
+          <div className="overflow-y-auto max-h-80 pr-4 custom-scrollbar md:max-h-[600px]">
             <div className="grid md:grid-cols-2 gap-6">
               {projects.map((project) => (
                 <div
@@ -29,19 +29,19 @@ const ProjectContainer = ({projects, length}) => {
 
                   {/* Project Content */}
                   <div className="p-5">
-                    <h4 className="text-lg font-semibold mb-2 text-[var(--accent)]">
+                    <h4 className="project-title font-semibold mb-2 text-[var(--accent)]">
                       {project.title}
                     </h4>
-                    <p className="text-[var(--text-color)] text-sm mb-4 leading-relaxed line-clamp-2">
+                    <p className="max-h-[50px] overflow-y-auto md:overflow-hidden md:max-h-full project-desc text-[var(--text-color)] mb-4 leading-relaxed">
                       {project.description}
                     </p>
 
                     {/* Technologies */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="project-tech flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, index) => (
                         <span
                           key={index}
-                          className="project-techstack px-3 py-1"
+                          className="project-techstack px-2 md:px-3 md:py-1"
                         >
                           {tech}
                         </span>

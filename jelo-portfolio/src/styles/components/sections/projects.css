@@ -54,6 +54,10 @@
     border-top: 1px solid var(--accent);
 }
 
+.project-title {
+    font-size: var(--text-lg);
+}
+
 .project-techstack {
   color: var(--text-color);
   border: 1px solid var(--text-color);
@@ -114,4 +118,33 @@
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #64748b;
+}
+
+@media (max-width: 767px) {
+  .project-tagline {
+  font-size: var(--text-3xl);
+  font-style: italic;
+}
+
+.project-tagline span {
+  font-size: var(--text-3xl);
+  padding: 10px;
+}
+
+.project-subtext {
+    color: var(--text-color);
+    font-size: var(--text-sm);
+}
+
+.project-title {
+    font-size: var(--text-lg);
+}
+
+.project-desc, .project-techstack, .project-link a {
+  font-size: var(--text-xs);
+}
+
+.view-btn {
+    font-size: var(--text-sm);
+}
 }
