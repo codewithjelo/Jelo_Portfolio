@@ -3,14 +3,14 @@
 }
 
 .project-tagline {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Anton', sans-serif;
     color: var(--text-color);
     font-size: var(--text-4xl);
     font-style: italic;
 }
 
 .project-tagline span {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Anton', sans-serif;
     color: var(--accent);
     font-size: var(--text-4xl);
     padding: 10px;
