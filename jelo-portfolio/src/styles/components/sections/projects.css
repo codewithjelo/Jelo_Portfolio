@@ -123,12 +123,10 @@
 @media (max-width: 767px) {
   .project-tagline {
   font-size: var(--text-3xl);
-  font-style: italic;
 }
 
 .project-tagline span {
   font-size: var(--text-3xl);
-  padding: 10px;
 }
 
 .project-subtext {
