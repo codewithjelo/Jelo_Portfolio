@@ -149,3 +149,23 @@
 .animate-fade-in {
     animation: fade-in 0.5s ease-out;
 }
+
+@media (max-width: 767px) {
+  .contact-tagline {
+  font-size: var(--text-3xl);
+}
+
+.contact-tagline span {
+  font-size: var(--text-3xl);
+}
+
+.contact-subtext {
+    color: var(--text-color);
+    font-size: var(--text-sm);
+}
+
+.social-icons svg {
+  width: 16px;
+  height: 16px;
+}
+}

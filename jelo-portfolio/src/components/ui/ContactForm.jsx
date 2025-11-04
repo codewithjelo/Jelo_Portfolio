@@ -31,7 +31,7 @@ const ContactForm = () => {
 
   return (
     <div className="space-y-12 animate-fade-in">
-      <div className="contact-card grid grid-cols-2 pt-8 px-8">
+      <div className="contact-card grid grid-cols-1 lg:grid-cols-2 pt-8 px-8">
         <div>
           <h3 className="contact-text flex text-2xl font-semibold mb-6">
             <Mail className="contact-icon my-1 mr-2" size={24} />
@@ -114,8 +114,8 @@ const ContactForm = () => {
           </form>
         </div>
 
-        <div className="p-8">
-          <img src="../src/assets/email-illustration.png" alt="email-illustration" />
+        <div className="p-3 md:p-8">
+          <img src="../src/assets/email-illustration.png" alt="email-illustration" className="hidden md:flex" />
         </div>
       </div>
     </div>

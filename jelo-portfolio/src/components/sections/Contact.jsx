@@ -7,8 +7,8 @@ const Contact = forwardRef((props, ref) => {
   const [activeSection, setActiveSection] = useState("contact-form");
 
   return (
-    <section id="contact" ref={ref} className="min-h-screen min-w-screen py-20">
-      <div className="max-w-6xl mx-auto">
+    <section id="contact" ref={ref} className="min-h-screen min-w-screen">
+      <div className="container max-w-full">
         {/* Contact Header */}
         <div className="mb-12 text-center">
           <h2 className="contact-tagline mt-10 mb-4 uppercase">
@@ -25,7 +25,7 @@ const Contact = forwardRef((props, ref) => {
           <div className="bg-[var(--background)] rounded-full p-2 inline-flex gap-2 border border-[var(--border-black)]">
             <button
               onClick={() => setActiveSection("contact-form")}
-              className={`text-[var(--accent)] px-8 py-3 rounded-full transition-all duration-300 ${
+              className={`text-[var(--accent)] px-4 py-2 md:px-8 md:py-3 rounded-full transition-all duration-300 ${
                 activeSection === "contact-form"
                   ? "bg-[var(--accent)] text-[var(--text-color)]"
                   : "hover:bg-white/10"
@@ -35,7 +35,7 @@ const Contact = forwardRef((props, ref) => {
             </button>
             <button
               onClick={() => setActiveSection("social")}
-              className={`text-[var(--accent)] px-8 py-3 rounded-full transition-all duration-300 ${
+              className={`text-[var(--accent)] px-4 py-2 md:px-8 md:py-3 rounded-full transition-all duration-300 ${
                 activeSection === "social"
                   ? "bg-[var(--accent)] text-[var(--text-color)]"
                   : "hover:bg-white/10"
