@@ -6,6 +6,8 @@ const AboutCard = () => {
       <h3 className="about-text flex text-2xl font-semibold mb-2">
         <Briefcase className="about-icon my-1 mr-2" size={24} /> About
       </h3>
+
+      <div className="overflow-y-auto max-h-64 md:max-h-full md:overflow-hidden">
       <p className="about-desc leading-relaxed text-justify indent-8 px-4">
         I am Jann Angelo C. Dimaano, 22 years old, from Batangas City. I am a
         fresh graduate from Batangas State University and took BS Information
@@ -22,6 +24,7 @@ const AboutCard = () => {
         experience, combined with my academic background, has helped me grow
         into a more capable web developer.
       </p>
+      </div>
     </div>
   );
 };

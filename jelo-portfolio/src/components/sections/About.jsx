@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef } from "react";
 import { SiReact, SiLaravel, SiPython, SiTailwindcss } from "react-icons/si";
 import AboutCard from "../ui/AboutCard";
 import CertificateCard from "../ui/CertificateCard";
@@ -9,10 +9,10 @@ import "../../styles/components/sections/about.css";
 const About = forwardRef((props, ref) => {
   const techLogos = [
     { node: <SiReact />, title: "React" },
-    { node: <SiLaravel />, title: "Laravel"},
+    { node: <SiLaravel />, title: "Laravel" },
     {
       node: <SiPython />,
-      title: "Python"
+      title: "Python",
     },
     {
       node: <SiTailwindcss />,
@@ -21,17 +21,16 @@ const About = forwardRef((props, ref) => {
   ];
 
   return (
-    <section id="about" ref={ref} className="min-h-screen min-w-screen py-20">
-      <div className="max-w-7xl px-6">
+    <section id="about" ref={ref} className="min-h-screen min-w-screen">
+      <div className="container max-w-full">
         <h1 className="about-tagline uppercase text-center mt-10 mb-4">
-          “<span>Learning </span> today <span>to build a better</span> tomorrow
-          ”
+          About <span>me</span>
         </h1>
 
         <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-16"></div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-[650px_1fr] gap-[2vw]">
+        <div className="grid grid-cols-1 gap-[5vw] md:grid-cols-[650px_1fr] gap-[2vw]">
           {/* Left Column - Personal Info */}
           <AboutCard />
 
@@ -59,6 +58,6 @@ const About = forwardRef((props, ref) => {
   );
 });
 
-About.displayName = 'About';
+About.displayName = "About";
 
 export default About;
