@@ -31,11 +31,11 @@ const Hero = forwardRef((props, ref) => {
   };
 
   return (
-    <section id="home" ref={ref} className="min-h-screen flex items-center">
+    <section id="home" ref={ref} className="min-h-92 lg:min-h-screen flex flex-col pt-10 sm:pt-20 sm:items-center">
       <div className="container max-w-full flex flex-col lg:flex-row items-center gap-[10vw]">
         {/* Left: text */}
         <div className="w-full lg:w-2/5">
-          <h1 className="name-text text-4xl sm:text-4xl font-extrabold leading-tight mb-4">
+          <h1 className="name-text text-2xl md:text-4xl font-extrabold leading-tight mb-4">
             Hello, I'm
             <br />
             <GradientText
@@ -48,12 +48,12 @@ const Hero = forwardRef((props, ref) => {
               ]}
               animationSpeed={15}
               showBorder={false}
-              className="custom-class text-6xl"
+              className="custom-class text-4xl md:text-6xl"
             >
               Jann Angelo
             </GradientText>
             <TextType
-              className="custom-class text-2xl font-thin font-mono"
+              className="custom-class text-xl md:text-2xl font-thin font-mono"
               text={["Web Developer"]}
               typingSpeed={200}
               showCursor={true}
@@ -122,7 +122,7 @@ const Hero = forwardRef((props, ref) => {
             .getElementById("about")
             .scrollIntoView({ behavior: "smooth" });
         }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 transition cursor-pointer"
+        className="py-10 self-center cursor-pointer"
       >
         <ChevronDown className="chevron-down w-8 h-8 animate-bounce" />
       </a>

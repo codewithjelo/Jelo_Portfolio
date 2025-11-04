@@ -17,7 +17,7 @@ const TechStackCard = () => {
 
   return (
     <div className="techstack-card p-5">
-      <h2 className="techstack-text text-2xl flex font-bold mb-4">
+      <h2 className="techstack-text text-xl lg:text-2xl flex font-bold mb-4">
         <Bolt className="about-icon mt-1 mr-2" size={24} />
         Tech Stack
       </h2>

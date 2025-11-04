@@ -33,7 +33,7 @@ const ContactForm = () => {
     <div className="space-y-12 animate-fade-in">
       <div className="contact-card grid grid-cols-1 lg:grid-cols-2 pt-8 px-8">
         <div>
-          <h3 className="contact-text flex text-2xl font-semibold mb-6">
+          <h3 className="contact-text flex text-xl lg:text-2xl font-semibold mb-6">
             <Mail className="contact-icon my-1 mr-2" size={24} />
             Send me a Message
           </h3>

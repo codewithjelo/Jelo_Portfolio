@@ -130,20 +130,19 @@
 
 @media (max-width: 767px) {
   .about-tagline {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: var(--text-color);
   font-size: var(--text-3xl);
-  font-style: italic;
 }
 
 .about-tagline span {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: var(--accent);
   font-size: var(--text-3xl);
-  padding: 10px;
 }
 
 .about-desc {
   font-size: var(--text-sm);
+}
+
+.about-text svg {
+  width: 20px;
+  height: 20px;
 }
 }

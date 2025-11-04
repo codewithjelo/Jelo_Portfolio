@@ -7,7 +7,7 @@ const ProjectContainer = ({projects, length}) => {
           {/* Container Header */}
           <div className="project-header flex items-center gap-3 mb-8 pb-6">
             <FolderOpen className="project-icon" size={24} />
-            <h3 className="font-semibold text-2xl text">All Projects</h3>
+            <h3 className="font-semibold text-xl lg:text-2xl">All Projects</h3>
             <span className="ml-auto">
               {length} Projects
             </span>

@@ -14,7 +14,7 @@ const Contact = forwardRef((props, ref) => {
           <h2 className="contact-tagline mt-10 mb-4 uppercase">
             LET'S<span>CONNECT</span>
           </h2>
-          <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-8 md:mb-16"></div>
           <p className="contact-subtext max-w-2xl mx-auto">
             Have a project in mind or just want to chat? Feel free to reach out!
           </p>

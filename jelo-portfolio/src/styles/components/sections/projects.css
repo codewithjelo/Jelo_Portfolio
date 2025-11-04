@@ -34,7 +34,6 @@
 
 .project-header h3 {
     color: var(--text-color);
-    font-size: var(--text-2xl);
 }
 
 .project-header span {

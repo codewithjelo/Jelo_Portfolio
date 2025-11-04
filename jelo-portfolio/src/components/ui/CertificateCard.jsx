@@ -12,7 +12,7 @@ const CertificateCard = () => {
 
   return (
     <div className="cert-card p-5">
-      <h3 className="cert-text flex text-2xl font-semibold mb-3">
+      <h3 className="cert-text flex text-xl lg:text-2xl font-semibold mb-3">
         <Award className="about-icon my-1 mr-2" size={24} /> Certification
       </h3>
 

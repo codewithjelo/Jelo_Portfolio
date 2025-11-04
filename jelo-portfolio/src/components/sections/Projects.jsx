@@ -102,7 +102,7 @@ const Projects = forwardRef((props, ref) => {
           <h2 className="project-tagline mt-10 mb-4 uppercase">
             Featured<span>Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-8 md:mb-16"></div>
           <p className="project-subtext max-w-2xl mx-auto">
             A collection of my recent work and personal projects that showcase
             my skills in web development.

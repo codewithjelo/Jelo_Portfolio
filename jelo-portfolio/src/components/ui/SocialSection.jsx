@@ -20,7 +20,7 @@ const SocialSection = () => {
     <div className="space-y-10 animate-fade-in">
       <div className="contact-card grid grid-cols-1 lg:grid-cols-2 gap-3 rounded-2xl">
         <div className="grid grid-cols-1 grid p-8 gap-5">
-          <h3 className="social-title text-2xl font-semibold">Get in Touch</h3>
+          <h3 className="social-title text-xl lg:text-2xl font-semibold">Get in Touch</h3>
 
           <div className="flex flex-col gap-5">
             <div className="flex items-start gap-4">
@@ -56,7 +56,7 @@ const SocialSection = () => {
             </div>
           </div>
 
-          <h3 className="social-title text-2xl font-semibold">Follow Me</h3>
+          <h3 className="social-title text-xl lg:text-2xl font-semibold">Follow Me</h3>
           <div>
             <div className="grid grid-cols-3 w-[150px] md:w-44 gap-4">
               {socialLinks.map((social) => (
