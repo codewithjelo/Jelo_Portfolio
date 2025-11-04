@@ -27,7 +27,7 @@ const About = forwardRef((props, ref) => {
           About <span>me</span>
         </h1>
 
-        <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-16"></div>
+        <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-8 md:mb-16"></div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 gap-[5vw] md:grid-cols-[650px_1fr] gap-[2vw]">
