@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Github, Linkedin, Twitter, MapPin, Phone } from "lucide-react";
+import social from "../../assets/social.png"
 
 const SocialSection = () => {
   const socialLinks = [
@@ -78,7 +79,7 @@ const SocialSection = () => {
 
         <div className="p-3 md:p-8">
           <img
-            src="../src/assets/social.png"
+            src={social}
             alt="social"
             className="hidden md:flex"
           />

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Mail, Send } from "lucide-react";
+import emailIllustration from "../../assets/email-illustration.png"
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -115,7 +116,7 @@ const ContactForm = () => {
         </div>
 
         <div className="p-3 lg:p-8">
-          <img src="../src/assets/email-illustration.png" alt="email-illustration" className="hidden lg:flex" />
+          <img src={emailIllustration} alt="email-illustration" className="hidden lg:flex" />
         </div>
       </div>
     </div>
