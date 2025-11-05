@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Mail, Send } from "lucide-react";
-import emailIllustration from "../../assets/email-illustration.png"
+import emailIllustration from "../../assets/email-illustration.png";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -34,16 +34,13 @@ const ContactForm = () => {
     <div className="space-y-12 animate-fade-in">
       <div className="contact-card grid grid-cols-1 lg:grid-cols-2 py-8 px-8">
         <div>
-          <h3 className="contact-text flex text-xl lg:text-2xl font-semibold mb-6">
-            <Mail className="contact-icon my-1 mr-2" size={24} />
-            Send me a Message
+          <h3 className="flex items-center contact-text flex text-xl lg:text-2xl font-semibold mb-6">
+            <Mail className="mr-2 text-[var(--accent)]" size={24} />
+            <span>Send me a Message</span>
           </h3>
           <form onSubmit={handleSubmit} className="space-y-2">
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium mb-2"
-              >
+              <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Name
               </label>
               <input
@@ -59,10 +56,7 @@ const ContactForm = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium mb-2"
-              >
+              <label htmlFor="email" className="block text-sm font-medium mb-2">
                 Email
               </label>
               <input
@@ -116,7 +110,11 @@ const ContactForm = () => {
         </div>
 
         <div className="p-3 lg:p-8">
-          <img src={emailIllustration} alt="email-illustration" className="hidden lg:flex" />
+          <img
+            src={emailIllustration}
+            alt="email-illustration"
+            className="hidden lg:flex"
+          />
         </div>
       </div>
     </div>

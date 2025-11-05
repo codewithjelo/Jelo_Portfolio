@@ -61,10 +61,6 @@
     color: var(--text-color);
 }
 
-.contact-icon {
-  color: var(--accent);
-}
-
 .contact-btn {
   position: relative;
   overflow: hidden;
