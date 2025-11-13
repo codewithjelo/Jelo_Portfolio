@@ -31,7 +31,7 @@ const SocialSection = () => {
     <div className="space-y-10 animate-fade-in">
       <div className="contact-card grid grid-cols-1 lg:grid-cols-2 gap-3 rounded-2xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 p-8">
-          <div className="h-40 mb-5">
+          <div className="xl:h-40 mb-5">
             <h3 className="flex items-center social-title text-xl lg:text-2xl font-semibold pb-2">
               <MessageCircle className="mr-2 text-[var(--accent)]" size={24} />
               <span>Get in Touch</span>
