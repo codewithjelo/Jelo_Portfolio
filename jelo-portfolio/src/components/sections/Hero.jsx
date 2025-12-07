@@ -1,9 +1,9 @@
-import { forwardRef } from 'react';
+import { forwardRef } from "react";
 import GradientText from "../animations/GradientText";
 import TextType from "../animations/TextType";
 import Button from "../ui/Button";
 import profileImg from "../../assets/images/jelo.jpg";
-import '../../styles/components/sections/hero.css'
+import "../../styles/components/sections/hero.css";
 import { Download, ChevronDown } from "lucide-react";
 import {
   SiHtml5,
@@ -31,7 +31,11 @@ const Hero = forwardRef((props, ref) => {
   };
 
   return (
-    <section id="home" ref={ref} className="min-h-92 xl:min-h-screen flex flex-col pt-10 sm:pt-20 sm:items-center">
+    <section
+      id="home"
+      ref={ref}
+      className="min-h-92 xl:min-h-screen flex flex-col pt-10 sm:pt-20 sm:items-center"
+    >
       <div className="container max-w-full flex flex-col items-center xl:flex-row xl:gap-[10vw]">
         {/* Left: text */}
         <div className="w-full xl:w-2/5">
@@ -62,8 +66,10 @@ const Hero = forwardRef((props, ref) => {
           </h1>
 
           <p className="description max-w-xl mb-6">
-            I build fast, accessible, and maintainable front-end applications
-            using modern tools and best practices.
+            I build clean, responsive, and user-focused web interfaces. I
+            specialize in turning designs into interactive experiences using
+            modern web technologies, with a focus on performance and
+            accessibility.
           </p>
 
           <div className="flex items-center gap-4 mb-6">
@@ -130,6 +136,6 @@ const Hero = forwardRef((props, ref) => {
   );
 });
 
-Hero.displayName = 'Hero';
+Hero.displayName = "Hero";
 
 export default Hero;
