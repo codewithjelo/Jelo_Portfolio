@@ -14,7 +14,7 @@ import social from "../../assets/social.png";
 const SocialSection = () => {
   const [showMap, setShowMap] = useState(false);
   const socialLinks = [
-    { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
+    { icon: Github, href: "https://github.com/codewithjelo", label: "GitHub" },
     {
       icon: Linkedin,
       href: "https://linkedin.com/in/yourusername",
@@ -117,7 +117,7 @@ const SocialSection = () => {
           </div>
         </div>
 
-        <div className="hidden lg:flex p-3 md:p-8">
+        <div className="hidden lg:flex p-3 md:p-8 2xl:p-2 2xl:w-[500px]">
           <img src={social} alt="social" />
         </div>
       </div>
