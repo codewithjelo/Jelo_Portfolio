@@ -3,7 +3,7 @@ import {
   Mail,
   Github,
   Linkedin,
-  Twitter,
+  Facebook,
   MapPin,
   Phone,
   Globe,
@@ -17,13 +17,13 @@ const SocialSection = () => {
     { icon: Github, href: "https://github.com/codewithjelo", label: "GitHub" },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://ph.linkedin.com/in/jann-angelo-dimaano-59982037b",
       label: "LinkedIn",
     },
     {
-      icon: Twitter,
-      href: "https://twitter.com/yourusername",
-      label: "Twitter",
+      icon: Facebook,
+      href: "https://www.facebook.com/jelosski10",
+      label: "Facebook",
     },
   ];
 
