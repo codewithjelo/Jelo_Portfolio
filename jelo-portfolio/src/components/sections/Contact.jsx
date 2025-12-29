@@ -16,7 +16,7 @@ const Contact = forwardRef((props, ref) => {
           </h2>
           <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-8 md:mb-16"></div>
           <p className="contact-subtext max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? Feel free to reach out!
+            Have a project in mind? Feel free to reach out!
           </p>
         </div>
 
