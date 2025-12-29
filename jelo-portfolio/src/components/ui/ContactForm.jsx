@@ -33,7 +33,7 @@ const ContactForm = () => {
   return (
     <div className="space-y-12 animate-fade-in">
       <div className="contact-card place-items-center grid grid-cols-1 lg:grid-cols-2 py-8 px-8">
-        <div className="p-8 min-w-[757px]">
+        <div className="min-w-full">
           <h3 className="flex items-center contact-text flex text-xl lg:text-2xl font-semibold mb-6">
             <Mail className="mr-2 text-[var(--accent)]" size={24} />
             <span>Send me a Message</span>
