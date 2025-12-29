@@ -34,7 +34,7 @@
     font-size: var(--text-xs);
 }
 
-.contact-card a:hover {
+.contact-card a:hover, .contact-card .location:hover {
     color: var(--accent-hover);
 }
 
@@ -168,5 +168,18 @@
   .google-maps {
     width: 200px;
     height: 150px
+  }
+}
+
+@media (min-width:1400px) {
+  .block {
+    font-size: var(--text-lg);
+  }
+
+  .social-info p {
+    font-size: var(--text-lg);
+  }
+  .social-info a, .social-info .location{
+    font-size: var(--text-sm);
   }
 }
