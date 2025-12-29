@@ -29,15 +29,15 @@ const SocialSection = () => {
 
   return (
     <div className="space-y-10 animate-fade-in">
-      <div className="contact-card grid grid-cols-1 lg:grid-cols-2 gap-3 rounded-2xl">
+      <div className="contact-card grid grid-cols-1 lg:grid-cols-2 gap-3 rounded-2xl 2xl:pt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 p-8">
           <div className="xl:h-40 mb-5">
-            <h3 className="flex items-center social-title text-xl lg:text-2xl font-semibold pb-2">
+            <h3 className="flex items-center social-title text-xl lg:text-2xl font-semibold pb-2 mb-5">
               <MessageCircle className="mr-2 text-[var(--accent)]" size={24} />
               <span>Get in Touch</span>
             </h3>
 
-            <div className="flex flex-col gap-5">
+            <div className="social-info flex flex-col gap-5">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg">
                   <Mail className="text-[var(--accent)]" size={24} />
@@ -117,7 +117,7 @@ const SocialSection = () => {
           </div>
         </div>
 
-        <div className="hidden lg:flex p-3 md:p-8 2xl:p-2 2xl:w-[500px]">
+        <div className="hidden lg:flex p-3 md:p-8 2xl:p-2 2xl:w-[500px] 2xl:m-10">
           <img src={social} alt="social" />
         </div>
       </div>
