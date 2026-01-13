@@ -17,13 +17,13 @@ const ProjectContainer = ({ projects, length }) => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="project-card group bg-[var(--primary-color)] rounded-lg overflow-hidden border border-[var(--border-black)] hover:bg-[var(--secondary-color)] transition-all duration-300"
+              className="project-card group bg-[var(--primary-color)] rounded-lg overflow-hidden border border-[var(--border-black)] hover:bg-[var(--secondary-color)] transition-all duration-300 flex flex-col"
             >
               {/* Image Carousel */}
               <ImageCarousel images={project.images} title={project.title} />
 
               {/* Project Content */}
-              <div className="p-5">
+              <div className="p-5 flex flex-col flex-1">
                 <h4 className="project-title font-semibold mb-2 text-[var(--accent)]">
                   {project.title}
                 </h4>
@@ -32,7 +32,7 @@ const ProjectContainer = ({ projects, length }) => {
                 </p>
 
                 {/* Technologies */}
-                <div className="project-tech flex flex-wrap gap-2 mb-4">
+                <div className="project-tech flex flex-wrap gap-2 mt-auto mb-4">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
