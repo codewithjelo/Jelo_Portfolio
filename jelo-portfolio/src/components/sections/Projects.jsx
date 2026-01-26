@@ -18,7 +18,7 @@ const Projects = forwardRef((props, ref) => {
       technologies: ["HTML", "CSS", "Bootstrap", "Chart.js", "PHP", "MySQL"],
       images: [project1_1, project1_2, project1_3],
       github: "https://github.com/codewithjelo/ICS_Web_Portal.git",
-      demo: "",
+      demo: "https://ics-web-portal.wuaze.com",
     },
     {
       id: 2,
