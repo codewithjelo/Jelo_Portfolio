@@ -23,8 +23,8 @@ const Projects = forwardRef((props, ref) => {
     {
       id: 2,
       title: "TrabaLog - Job Application Tracker",
-      description: "A web-based system that helps users manage and track their job applications. Users can add and update applications, edit job statuses, and view overall application details. It has visual insights into application counts, status distribution, trends over time, and recent activities, making it easier to monitor job search progress efficiently.",
-      technologies: ["React", "TailwindCSS"],
+      description: "a front-end web application with a serverless Node.js API that allows users to manage and track job applications. Users can add and update applications, edit job statuses, and view overall details through a dashboard with visualized trends, status summaries, and recent activity monitoring.",
+      technologies: ["React", "TailwindCSS", "Node.js"],
       images: [project2_1, project2_2, project2_3],
       github: "https://github.com/codewithjelo/Job-Application-Tracker.git",
       demo: "https://trabalog.vercel.app",
