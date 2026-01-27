@@ -3,7 +3,7 @@ import { Bolt } from "lucide-react";
 const TechStackCard = () => {
   const techStack = [
     "React",
-    "Tailwind CSS",
+    "TailwindCSS",
     "Bootstrap",
     "PostgreSQL",
     "Laravel",
@@ -13,6 +13,7 @@ const TechStackCard = () => {
     "PHP",
     "MySQL",
     "JavaScript",
+    "Node.js",
   ];
 
   return (
