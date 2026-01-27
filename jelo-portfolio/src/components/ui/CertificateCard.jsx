@@ -8,12 +8,6 @@ const CertificateCard = () => {
       date: "May 2025",
       link: "https://drive.google.com/file/d/1KjB_6vhYF-5W_vgvmNWLc3UwbxiR_-xh/view?usp=drivesdk",
     },
-    {
-      title: "MIS On-The-Job Training",
-      inst: "MIS - BatStateU Pablo Borbon",
-      date: "May 2025",
-      link: "https://drive.google.com/file/d/1KjB_6vhYF-5W_vgvmNWLc3UwbxiR_-xh/view?usp=drivesdk",
-    },
   ];
 
   return (
