@@ -8,6 +8,12 @@ const CertificateCard = () => {
       date: "May 2025",
       link: "https://drive.google.com/file/d/1KjB_6vhYF-5W_vgvmNWLc3UwbxiR_-xh/view?usp=drivesdk",
     },
+    {
+      title: "MIS On-The-Job Training",
+      inst: "MIS - BatStateU Pablo Borbon",
+      date: "May 2025",
+      link: "https://drive.google.com/file/d/1KjB_6vhYF-5W_vgvmNWLc3UwbxiR_-xh/view?usp=drivesdk",
+    },
   ];
 
   return (
@@ -26,7 +32,14 @@ const CertificateCard = () => {
                 {/* Node */}
                 {index === 0 ? (
                   <>
-                    <div className="timeline absolute left-4 top-[45px] bottom-0 h-[95px] w-[1px]"></div>
+                    <div
+                      className={
+                        certs.length === 1
+                          ? "hidden"
+                          : "" +
+                            `timeline absolute left-4 top-[45px] bottom-0 h-[95px] w-[1px]`
+                      }
+                    ></div>
                     <div className="node absolute left-[9px] top-11 w-4 h-4"></div>
                     <a
                       href={cert.link}
