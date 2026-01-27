@@ -2,12 +2,12 @@ import { Award, Calendar } from "lucide-react";
 
 const CertificateCard = () => {
   const certs = [
-    { title: "React", inst: "JeloCamp", date: "Jan 2025", link: "https://www.w3schools.com" },
-    { title: "TailwindCSS", inst: "JeloCamp", date: "Feb 2025", link: "https://www.w3schools.com" },
-    { title: "Javascript", inst: "JeloCamp", date: "Mar 2025", link: "https://www.w3schools.com" },
-    { title: "Python", inst: "JeloCamp", date: "Apr 2025", link: "https://www.w3schools.com" },
-    { title: "Java", inst: "JeloCamp", date: "Jun 2025", link: "https://www.w3schools.com" },
-    { title: "Laravel", inst: "JeloCamp", date: "Jul 2025", link: "https://www.w3schools.com" },
+    {
+      title: "MIS On-The-Job Training",
+      inst: "MIS - BatStateU Pablo Borbon",
+      date: "May 2025",
+      link: "https://drive.google.com/file/d/1KjB_6vhYF-5W_vgvmNWLc3UwbxiR_-xh/view?usp=drivesdk",
+    },
   ];
 
   return (
@@ -19,7 +19,7 @@ const CertificateCard = () => {
       {/* Vertical Timeline Line - now inside scrollable container */}
       {/* Skills Grid */}
       <div className="relative">
-        <div className="custom-scrollbar snap-y flex flex-col max-h-[230px] overflow-y-auto gap-4">
+        <div className="custom-scrollbar snap-y flex flex-col h-[230px] overflow-y-auto gap-4">
           {[...certs].reverse().map((cert, index, array) => (
             <div key={index} className="snap-start mr-4">
               <div className="certs relative pl-10 mt-1">
