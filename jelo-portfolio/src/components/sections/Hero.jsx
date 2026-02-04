@@ -1,10 +1,13 @@
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
+import Swal from "sweetalert2";
+import { GitHubCalendar } from "react-github-calendar";
 import GradientText from "../animations/GradientText";
 import TextType from "../animations/TextType";
 import Button from "../ui/Button";
 import profileImg from "../../assets/images/jelo.jpg";
+import CVModal from "../ui/CVModal";
 import "../../styles/components/sections/hero.css";
-import { Download, ChevronDown } from "lucide-react";
+import { Download, ChevronDown, Eye } from "lucide-react";
 import {
   SiHtml5,
   SiCss3,
@@ -13,21 +16,48 @@ import {
   SiReact,
   SiLaravel,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const Hero = forwardRef((props, ref) => {
-  const handleDownload = () => {
-    const confirmDownload = window.confirm(
-      "Do you want to download the resume?"
-    );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const resumePath = "./src/assets/resume/Dimaano-Jann-Angelo-Resume.pdf";
 
-    if (confirmDownload) {
-      const link = document.createElement("a");
-      link.href = "./src/assets/resume/Dimaano-Jann-Angelo-Resume.pdf";
-      link.download = "Dimaano-Jann-Angelo-Resume.pdf"; // Name for the downloaded file
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+  const handleDownload = () => {
+    Swal.fire({
+      title: "Download Resume?",
+      text: "Do you want to download the resume?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#30d662",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, download it!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const link = document.createElement("a");
+        link.href = "./src/assets/resume/Dimaano-Jann-Angelo-Resume.pdf";
+        link.download = "Dimaano-Jann-Angelo-Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        Swal.fire({
+          title: "Downloaded!",
+          text: "Your resume has been downloaded.",
+          icon: "success",
+          timer: 2000,
+          showConfirmButton: false,
+        });
+      }
+    });
+  };
+
+  const handleViewCV = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -39,83 +69,145 @@ const Hero = forwardRef((props, ref) => {
       <div className="container max-w-full flex flex-col items-center xl:flex-row xl:gap-[10vw]">
         {/* Left: text */}
         <div className="w-full xl:w-2/5">
-          <h1 className="name-text text-2xl md:text-4xl font-extrabold leading-tight mb-4">
-            Hello, I'm
-            <br />
-            <GradientText
-              colors={[
-                "#da6ee2",
-                "#746ee2ff",
-                "#da6ee2",
-                "#746ee2ff",
-                "#da6ee2",
-              ]}
-              animationSpeed={15}
-              showBorder={false}
-              className="custom-class text-4xl md:text-6xl"
-            >
-              Jann Angelo
-            </GradientText>
-            <TextType
-              className="custom-class text-xl md:text-2xl font-thin font-mono"
-              text={["Web Developer"]}
-              typingSpeed={200}
-              showCursor={true}
-              cursorCharacter="_"
-            />
-          </h1>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="name-text text-2xl md:text-4xl font-extrabold leading-tight mb-4">
+              Hello, I'm
+              <br />
+              <GradientText
+                colors={[
+                  "#da6ee2",
+                  "#746ee2ff",
+                  "#da6ee2",
+                  "#746ee2ff",
+                  "#da6ee2",
+                ]}
+                animationSpeed={15}
+                showBorder={false}
+                className="custom-class text-4xl md:text-6xl"
+              >
+                Jann Angelo
+              </GradientText>
+              <TextType
+                className="custom-class text-xl md:text-2xl font-thin font-mono"
+                text={["Web Developer"]}
+                typingSpeed={200}
+                showCursor={true}
+                cursorCharacter="_"
+              />
+            </h1>
 
-          <p className="description max-w-xl mb-6">
-            I build clean, responsive, and user-focused web interfaces. I
-            specialize in turning designs into interactive experiences using
-            modern web technologies, with a focus on performance and
-            accessibility.
-          </p>
+            <p className="description max-w-xl mb-6">
+              I build clean, responsive, and user-focused web interfaces. I
+              specialize in turning designs into interactive experiences using
+              modern web technologies, with a focus on performance and
+              accessibility.
+            </p>
+          </motion.div>
 
-          <div className="flex items-center gap-4 mb-6">
-            <Button
-              className="resume-btn inline-flex items-center px-5 py-3 font-semibold rounded-lg"
-              onClick={handleDownload}
-            >
-              <Download className="mr-2" size={18} />
-              <span className="flex">Download Resume</span>
-            </Button>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <Button
+                className="resume-btn inline-flex items-center px-5 py-3 font-semibold rounded-lg"
+                onClick={handleDownload}
+              >
+                <Download className="mr-2" size={18} />
+                <span className="flex">Download Resume</span>
+              </Button>
+
+              <Button
+                className="view-cv-btn inline-flex items-center px-5 py-3 font-semibold rounded-lg"
+                onClick={handleViewCV}
+              >
+                <Eye className="mr-2" size={18} />
+                <span className="flex">View CV</span>
+              </Button>
+            </div>
+          </motion.div>
+
+          <CVModal
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            pdfPath={resumePath}
+          />
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="w-full md:[&_.react-activity-calendar\_\_scroll-container]:overflow-visible md:[&_.react-activity-calendar\_\_calendar]:w-full md:[&_.react-activity-calendar\_\_calendar]:h-auto">
+              <GitHubCalendar
+                username="codewithjelo"
+                colorScheme="light"
+                blockRadius={5}
+                blockMargin={5}
+                blockSize={15}
+                fontSize={20}
+                theme={{
+                  light: [
+                    "#ebedf0",
+                    "#f0c4f3",
+                    "#e89aec",
+                    "#e270e5",
+                    "#da6ee2",
+                  ],
+                }}
+                style={{
+                  backgroundColor: "var(--bg-secondary)",
+                  color: "var(--text-color)",
+                }}
+              />
+            </div>
+          </motion.div>
         </div>
 
         {/* Right: image / illustration */}
         <div className="w-full xl:w-3/5 flex justify-center xl:justify-end">
-          <div className="relative h-50 sm:w-96 sm:h-96 md:w-[25rem] md:h-[25rem] p-1 rounded-full">
-            <div className="neon absolute inset-0 rounded-full bg-gradient-to-tr from-[#da6ee2] to-[#1E201E] filter blur-md mb-2 ms-2"></div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="relative h-50 sm:w-96 sm:h-96 md:w-[25rem] md:h-[25rem] p-1 rounded-full">
+              <div className="neon absolute inset-0 rounded-full bg-gradient-to-tr from-[#da6ee2] to-[#1E201E] filter blur-md mb-2 ms-2"></div>
 
-            {/* floating icons (looping animation) */}
-            <div className="floating-icon icon-1" title="HTML">
-              <SiHtml5 className="tech-icon" />
-            </div>
-            <div className="floating-icon icon-2" title="CSS">
-              <SiCss3 className="tech-icon" />
-            </div>
-            <div className="floating-icon icon-3" title="Python">
-              <SiPython className="tech-icon" />
-            </div>
-            <div className="floating-icon icon-4" title="Laravel">
-              <SiLaravel className="tech-icon" />
-            </div>
-            <div className="floating-icon icon-5" title="React">
-              <SiReact className="tech-icon" />
-            </div>
-            <div className="floating-icon icon-6" title="Tailwind">
-              <SiTailwindcss className="tech-icon" />
-            </div>
+              {/* floating icons (looping animation) */}
+              <div className="floating-icon icon-1" title="HTML">
+                <SiHtml5 className="tech-icon" />
+              </div>
+              <div className="floating-icon icon-2" title="CSS">
+                <SiCss3 className="tech-icon" />
+              </div>
+              <div className="floating-icon icon-3" title="Python">
+                <SiPython className="tech-icon" />
+              </div>
+              <div className="floating-icon icon-4" title="Laravel">
+                <SiLaravel className="tech-icon" />
+              </div>
+              <div className="floating-icon icon-5" title="React">
+                <SiReact className="tech-icon" />
+              </div>
+              <div className="floating-icon icon-6" title="Tailwind">
+                <SiTailwindcss className="tech-icon" />
+              </div>
 
-            <div className="image-container relative z-10 shadow-xl w-full h-full bg-slate-900 rounded-full overflow-hidden flex items-center justify-center">
-              <img
-                src={profileImg}
-                alt="Jelo Image"
-                className="object-cover object-top w-full h-full"
-              />
+              <div className="image-container relative z-10 shadow-xl w-full h-full bg-slate-900 rounded-full overflow-hidden flex items-center justify-center">
+                <img
+                  src={profileImg}
+                  alt="Jelo Image"
+                  className="object-cover object-top w-full h-full"
+                />
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

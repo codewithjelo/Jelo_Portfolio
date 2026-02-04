@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import { motion } from "framer-motion";
 import "../../styles/components/sections/projects.css";
 import project1_1 from "../../assets/images/project1-1.png";
 import project1_2 from "../../assets/images/project1-2.png";
@@ -23,7 +24,8 @@ const Projects = forwardRef((props, ref) => {
     {
       id: 2,
       title: "TrabaLog - Job Application Tracker",
-      description: "A front-end web application with a serverless Node.js API that allows users to manage and track job applications. Users can add and update applications, edit job statuses, and view overall details through a dashboard with visualized trends, status summaries, and recent activity monitoring.",
+      description:
+        "A front-end web application with a serverless Node.js API that allows users to manage and track job applications. Users can add and update applications, edit job statuses, and view overall details through a dashboard with visualized trends, status summaries, and recent activity monitoring.",
       technologies: ["React", "TailwindCSS", "Node.js"],
       images: [project2_1, project2_2, project2_3],
       github: "https://github.com/codewithjelo/Job-Application-Tracker.git",
@@ -36,18 +38,32 @@ const Projects = forwardRef((props, ref) => {
       <div className="container max-w-full">
         {/* Project Header */}
         <div className="mb-12 text-center">
-          <h2 className="project-tagline mt-10 mb-4 uppercase">
-            Featured<span>Projects</span>
-          </h2>
-          <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-8 md:mb-16"></div>
-          <p className="project-subtext max-w-2xl mx-auto">
-            A collection of my recent work and personal projects that showcase
-            my skills in web development.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <h2 className="project-tagline mt-10 mb-4 uppercase">
+              Featured<span>Projects</span>
+            </h2>
+            <div className="w-20 h-1 bg-[var(--accent)] mx-auto mb-8 md:mb-16"></div>
+            <p className="project-subtext max-w-2xl mx-auto">
+              A collection of my recent work and personal projects that showcase
+              my skills in web development.
+            </p>
+          </motion.div>
         </div>
 
         {/* Projects Container Card - Scrollable */}
-        <ProjectContainer projects={projects} length={projects.length} />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <ProjectContainer projects={projects} length={projects.length} />
+        </motion.div>
       </div>
     </section>
   );
