@@ -172,6 +172,13 @@
     width: 200px;
     height: 150px
   }
+
+  .contact-card input {
+    height: 35px;
+ }
+  .contact-card textarea {
+    height: 120px;
+  }
 }
 
 @media (min-width:1400px) {

@@ -75,7 +75,7 @@ const ContactForm = () => {
             <Mail className="mr-2 text-[var(--accent)]" size={24} />
             <span>Send me a Message</span>
           </h3>
-          <form onSubmit={handleSubmit} className="space-y-2">
+          <form onSubmit={handleSubmit} className="space-y-1 md:space-y-2">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Name
