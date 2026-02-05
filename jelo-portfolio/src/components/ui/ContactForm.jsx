@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Send } from "lucide-react";
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 import emailIllustration from "../../assets/email-illustration.png";
 
 const ContactForm = () => {
@@ -15,12 +17,47 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus("sending");
 
-    // Simulate sending (replace with your actual form handling)
-    setTimeout(() => {
-      setStatus("sent");
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setStatus(""), 3000);
-    }, 1500);
+    Swal.fire({
+      title: 'Sending...',
+      text: 'Please wait while we send your message',
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
+    });
+
+    // Get credentials from environment variables
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_e4cotks';
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_57ie3aq';
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'wB_x0HGo-EtzKD_Bv';
+
+    emailjs.send(serviceID, templateID, formData, publicKey)
+      .then(() => {
+        setStatus("");
+        setFormData({ name: "", email: "", message: "" });
+        
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent!',
+          text: 'Thank you for reaching out. I\'ll get back to you soon!',
+          confirmButtonColor: 'var(--accent)',
+          confirmButtonText: 'Great!',
+          timer: 3000,
+          timerProgressBar: true,
+        });
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        setStatus("");
+        
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong! Please try again later.',
+          confirmButtonColor: 'var(--accent)',
+          confirmButtonText: 'OK',
+        });
+      });
   };
 
   const handleChange = (e) => {
@@ -97,8 +134,6 @@ const ContactForm = () => {
             >
               {status === "sending" ? (
                 "Sending..."
-              ) : status === "sent" ? (
-                "✓ Message Sent!"
               ) : (
                 <>
                   Send Message
