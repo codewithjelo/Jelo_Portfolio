@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Mail, Send } from "lucide-react";
-import emailjs from '@emailjs/browser';
-import Swal from 'sweetalert2';
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from "react-google-recaptcha-v3";
 import emailIllustration from "../../assets/email-illustration.png";
 
-const ContactForm = () => {
+const ContactFormContent = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,52 +16,77 @@ const ContactForm = () => {
   });
 
   const [status, setStatus] = useState("");
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!executeRecaptcha) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "reCAPTCHA not loaded. Please refresh the page.",
+        confirmButtonColor: "var(--accent)",
+      });
+      return;
+    }
+
     setStatus("sending");
 
     Swal.fire({
-      title: 'Sending...',
-      text: 'Please wait while we send your message',
+      title: "Verifying...",
+      text: "Please wait while we verify you're human",
       allowOutsideClick: false,
       didOpen: () => {
         Swal.showLoading();
-      }
+      },
     });
 
-    // Get credentials from environment variables
-    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_e4cotks';
-    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_57ie3aq';
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'wB_x0HGo-EtzKD_Bv';
+    try {
+      // Get reCAPTCHA token
+      const token = await executeRecaptcha("contact_form");
 
-    emailjs.send(serviceID, templateID, formData, publicKey)
-      .then(() => {
-        setStatus("");
-        setFormData({ name: "", email: "", message: "" });
-        
-        Swal.fire({
-          icon: 'success',
-          title: 'Message Sent!',
-          text: 'Thank you for reaching out. I\'ll get back to you soon!',
-          confirmButtonColor: 'var(--accent)',
-          confirmButtonText: 'Great!',
-          timer: 3000,
-          timerProgressBar: true,
-        });
-      })
-      .catch((error) => {
-        console.error('Failed to send email:', error);
-        setStatus("");
-        
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong! Please try again later.',
-          confirmButtonColor: 'var(--accent)',
-          confirmButtonText: 'OK',
-        });
+      // Verify if token exists
+      if (!token) {
+        throw new Error("reCAPTCHA verification failed");
+      }
+      
+      const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      console.log("Using EmailJS credentials:", {
+        serviceID,
+        templateID,
+        publicKey,
       });
+
+      await emailjs.send(serviceID, templateID, formData, publicKey);
+
+      setStatus("");
+      setFormData({ name: "", email: "", message: "" });
+
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: "Thank you for reaching out. I'll get back to you soon!",
+        confirmButtonColor: "var(--accent)",
+        confirmButtonText: "Great!",
+        timer: 3000,
+        timerProgressBar: true,
+      });
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setStatus("");
+
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong! Please try again later.",
+        confirmButtonColor: "var(--accent)",
+        confirmButtonText: "OK",
+      });
+    }
   };
 
   const handleChange = (e) => {
@@ -68,14 +97,14 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="space-y-12 animate-fade-in">
+    <div className="space-y-12 animate-fade-in h-full">
       <div className="contact-card place-items-center grid grid-cols-1 lg:grid-cols-2 py-8 px-8">
         <div className="min-w-full">
           <h3 className="flex items-center contact-text flex text-xl lg:text-2xl font-semibold mb-6">
             <Mail className="mr-2 text-[var(--accent)]" size={24} />
             <span>Send me a Message</span>
           </h3>
-          <form onSubmit={handleSubmit} className="space-y-1 md:space-y-2">
+          <form onSubmit={handleSubmit} className="space-y-2">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Name
@@ -142,6 +171,9 @@ const ContactForm = () => {
               )}
             </button>
           </form>
+          <p className="recaptcha-text text-xs text-center text-[var(--text-color)] mt-5">
+            Protected by reCAPTCHA
+          </p>
         </div>
 
         <div className="p-3 lg:p-8 2xl:w-[500px]">
@@ -153,6 +185,16 @@ const ContactForm = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const ContactForm = () => {
+  const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={recaptchaSiteKey}>
+      <ContactFormContent />
+    </GoogleReCaptchaProvider>
   );
 };
 

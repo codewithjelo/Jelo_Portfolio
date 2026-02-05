@@ -29,6 +29,11 @@
     font-size: var(--text-md);
 }
 
+.contact-card .recaptcha-text {
+    color: var(--text-color);
+    font-size: var(--text-xs);
+}
+
 .contact-card a, .contact-card .location {
     color: var(--subtext-color2);
     font-size: var(--text-xs);
