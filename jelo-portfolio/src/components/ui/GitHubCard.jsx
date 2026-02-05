@@ -5,7 +5,7 @@ const GitHubCard = () => {
   const GitHubCalendar = GHC.default || GHC.GitHubCalendar || GHC;
 
   return (
-    <div className="github-card p-5 col-span-2 w-full">
+    <div className="github-card p-5 md:col-span-2 w-full">
       <h2 className="github-text text-xl lg:text-2xl flex font-bold mb-4">
         <GitCommit className="about-icon mt-1 mr-2" size={28} />
         Public GitHub Contributions
