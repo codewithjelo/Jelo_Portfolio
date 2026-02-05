@@ -18,13 +18,13 @@
   padding: 10px;
 }
 
-.about-card, .cert-card, .techstack-card {
+.about-card, .cert-card, .techstack-card, .github-card {
   background-color: var(--background);
   border: 1px solid var(--border-black);
   border-radius: var(--border-lg);
 }
 
-.about-text, .cert-text, .techstack-text {
+.about-text, .cert-text, .techstack-text, .github-text {
   color: var(--text-color);
 }
 
