@@ -2,7 +2,7 @@ import { Briefcase } from "lucide-react";
 
 const AboutCard = () => {
   return (
-    <div className="about-card p-5 row-span-2">
+    <div className="about-card p-5 md:row-span-2">
       <h3 className="about-text flex text-xl lg:text-2xl font-semibold mb-2">
         <Briefcase className="about-icon my-1 mr-2" size={24} /> About
       </h3>
