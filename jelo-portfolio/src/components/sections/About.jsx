@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AboutCard from "../ui/AboutCard";
 import CertificateCard from "../ui/CertificateCard";
 import TechStackCard from "../ui/TechStackCard";
+import GitHubCard from "../ui/GitHubCard";
 import LogoLoop from "../animations/LogoLoop";
 import "../../styles/components/sections/about.css";
 
@@ -44,13 +45,14 @@ const About = forwardRef((props, ref) => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-1 gap-[5vw] md:grid-cols-[400px_1fr] md:gap-[2vw] lg:grid-cols-[550px_1fr] xl:grid-cols-[650px_1fr]">
+          <div className="grid grid-cols-1 gap-[5vw] md:grid-cols-[400px_1fr] md:gap-3 lg:grid-cols-[550px_1fr] xl:grid-cols-[650px_1fr]">
             {/* Left Column - Personal Info */}
             <AboutCard />
 
             {/* Right Column - Skills & Stats */}
             <TechStackCard />
             <CertificateCard />
+            <GitHubCard />
           </div>
         </motion.div>
         <div className="relative overflow-hidden w-full mt-20">
