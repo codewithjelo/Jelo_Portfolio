@@ -45,7 +45,7 @@ const About = forwardRef((props, ref) => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-1 gap-[5vw] md:grid-cols-[400px_1fr] md:gap-3 lg:grid-cols-[550px_1fr] xl:grid-cols-[650px_1fr]">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-[400px_1fr] lg:grid-cols-[550px_1fr] xl:grid-cols-[650px_1fr]">
             {/* Left Column - Personal Info */}
             <AboutCard />
 
