@@ -68,7 +68,7 @@ const Hero = forwardRef((props, ref) => {
     >
       <div className="container max-w-full flex flex-col items-center xl:flex-row xl:gap-[10vw]">
         {/* Left: text */}
-        <div className="w-full xl:w-2/5">
+        <div className="w-full">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,15 +115,15 @@ const Hero = forwardRef((props, ref) => {
           >
             <div className="flex items-center gap-4 mb-6">
               <Button
-                className="resume-btn inline-flex items-center px-5 py-3 font-semibold rounded-lg"
+                className="resume-btn inline-flex items-center px-5 py-3 font-semibold rounded-md"
                 onClick={handleDownload}
               >
                 <Download className="mr-2" size={18} />
-                <span className="flex">Download Resume</span>
+                <span className="flex">Download CV</span>
               </Button>
 
               <Button
-                className="view-cv-btn inline-flex items-center px-5 py-3 font-semibold rounded-lg"
+                className="view-cv-btn inline-flex items-center px-5 py-3 font-semibold rounded-md"
                 onClick={handleViewCV}
               >
                 <Eye className="mr-2" size={18} />
@@ -138,39 +138,10 @@ const Hero = forwardRef((props, ref) => {
             pdfPath={resumePath}
           />
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="w-full md:[&_.react-activity-calendar\_\_scroll-container]:overflow-visible md:[&_.react-activity-calendar\_\_calendar]:w-full md:[&_.react-activity-calendar\_\_calendar]:h-auto">
-              <GitHubCalendar
-                username="codewithjelo"
-                colorScheme="light"
-                blockRadius={5}
-                blockMargin={5}
-                blockSize={15}
-                fontSize={20}
-                theme={{
-                  light: [
-                    "#ebedf0",
-                    "#f0c4f3",
-                    "#e89aec",
-                    "#e270e5",
-                    "#da6ee2",
-                  ],
-                }}
-                style={{
-                  backgroundColor: "var(--bg-secondary)",
-                  color: "var(--text-color)",
-                }}
-              />
-            </div>
-          </motion.div>
         </div>
 
         {/* Right: image / illustration */}
-        <div className="w-full xl:w-3/5 flex justify-center xl:justify-end">
+        <div className="w-full flex justify-center xl:justify-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
