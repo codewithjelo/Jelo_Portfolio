@@ -16,10 +16,10 @@ import {
   SiLaravel,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import resumePath from "../../assets/resume/codewithjelo-resume.pdf";
 
 const Hero = forwardRef((props, ref) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const resumePath = "../../assets/resume/codewithjelo-resume.pdf";
 
   const handleDownload = () => {
     Swal.fire({
