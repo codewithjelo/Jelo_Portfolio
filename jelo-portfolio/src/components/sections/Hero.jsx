@@ -16,7 +16,7 @@ import {
   SiLaravel,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-import resumePath from "../../assets/resume/codewithjelo-resume.pdf";
+import resumePath from "../../assets/resume/Dimaano-Jann-Angelo-CV.pdf";
 
 const Hero = forwardRef((props, ref) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,7 +35,7 @@ const Hero = forwardRef((props, ref) => {
       if (result.isConfirmed) {
         const link = document.createElement("a");
         link.href = resumePath;
-        link.download = "Dimaano-Jann-Angelo-Resume.pdf";
+        link.download = "Dimaano-Jann-Angelo-CV.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
