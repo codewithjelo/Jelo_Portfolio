@@ -14,8 +14,8 @@ const CVModal = ({ isOpen, onClose, pdfPath }) => {
       <div
         className="relative w-full max-w-5xl bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl overflow-hidden"
       >
-        <div className="flex items-center justify-between p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-          <h3 className="text-xl font-bold flex items-center gap-2">
+        <div className="flex items-center justify-between p-4 bg-gradient-to-r from-[var(--accent)] to-[var(--accent-hover)] text-white">
+          <h3 className="text-xl font-bold flex items-center gap-2 mx-auto">
             Resume Preview
           </h3>
           <button
