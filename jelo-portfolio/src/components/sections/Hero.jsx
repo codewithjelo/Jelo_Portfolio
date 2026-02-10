@@ -1,6 +1,5 @@
 import { forwardRef, useState } from "react";
 import Swal from "sweetalert2";
-import { GitHubCalendar } from "react-github-calendar";
 import GradientText from "../animations/GradientText";
 import TextType from "../animations/TextType";
 import Button from "../ui/Button";
@@ -20,7 +19,7 @@ import { motion } from "framer-motion";
 
 const Hero = forwardRef((props, ref) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const resumePath = "./src/assets/resume/Dimaano-Jann-Angelo-Resume.pdf";
+  const resumePath = "../../assets/resume/Dimaano-Jann-Angelo-Resume.pdf";
 
   const handleDownload = () => {
     Swal.fire({
