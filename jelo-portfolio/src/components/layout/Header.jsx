@@ -54,7 +54,15 @@ const Header = () => {
       <nav className="nav-container max-w-full">
         <div className="flex items-center justify-between">
           <div className="logo-container text-2xl font-bold">
-            <a href="#home">
+            <a
+              href="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById(navItems[0].href)
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               {
                 <GradientText
                   colors={[
