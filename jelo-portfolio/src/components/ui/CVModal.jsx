@@ -7,8 +7,7 @@ const CVModal = ({ isOpen, onClose, pdfPath }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 backdrop-blur-sm"
-      style={{ animation: "fadeIn 0.3s ease-out" }}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 backdrop-blur-sm animate-fade-in ease-in-out p-4"
       onClick={onClose}
     >
       <div
