@@ -34,7 +34,7 @@ const Hero = forwardRef((props, ref) => {
     }).then((result) => {
       if (result.isConfirmed) {
         const link = document.createElement("a");
-        link.href = "./src/assets/resume/Dimaano-Jann-Angelo-Resume.pdf";
+        link.href = resumePath;
         link.download = "Dimaano-Jann-Angelo-Resume.pdf";
         document.body.appendChild(link);
         link.click();
