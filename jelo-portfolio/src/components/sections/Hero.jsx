@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
 
 const Hero = forwardRef((props, ref) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const resumePath = "../../assets/resume/Dimaano-Jann-Angelo-Resume.pdf";
+  const resumePath = "../../assets/resume/codewithjelo-resume.pdf";
 
   const handleDownload = () => {
     Swal.fire({
